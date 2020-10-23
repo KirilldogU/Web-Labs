@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <nav class="nav_bar">
+        <a href="https://user.tjhsst.edu/2020kusubyan/">Home!</a>
+    </nav>
+    <div>
+        <form>
+          <h1>Your google query?</h1><br>
+          <p>Keyword:</p>
+          <input type="text" id="query" name="query"><br>
+          <p>City: (Format: 'City, State')</p> 
+          <input type="text" id="city_state" name="city_state"><br>
+          <p>Base:</p>
+          <button type="button" onclick="googleBase()">google!</button><br>
+          <p>Below for 100 cities + SQL</p><br>
+          <button type="button" onclick="googleFull()">google!</button><br>
+        </form>
+        <p id="adsText">Ads: </p><br><br>
+        <p id="resultText">Full Results: </p><br><br>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+    function googleBase() {    
+        var query = document.getElementById("query").value;
+        var city_state = document.getElementById("city_state").value;
+        var ajax_params = {
+            'url'     : "https://user.tjhsst.edu/2020kusubyan/serp_worker",
+            'type'    : "get",
+            'data'    : { 'query' : query,
+                        'citystate' :city_state    },
+            'success' : onServerResponse
+        }
+        $.ajax( ajax_params);
+    }
+    function googleFull() {    
+        var query = document.getElementById("query").value;
+        var city_state = document.getElementById("city_state").value;
+        var ajax_params = {
+            'url'     : "https://user.tjhsst.edu/2020kusubyan/serp_extended_worker",
+            'type'    : "get",
+            'data'    : { 'query' : query,
+                        'citystate' :city_state    },
+            'success' : onServerResponse
+        }
+        $.ajax( ajax_params)
+    }
+    function onServerResponse (responseDictionary) {
+        console.log(responseDictionary);
+//        document.getElementById('resultText').innerHTML = "Yoda voted winner: " + responseDictionary["yodaWins"]+ "<br>Florida Man voted winner: " + responseDictionary["floridaManWins"] + "<br>Night King voted winner: " + responseDictionary["nightKingWins"] + "<br>Thanos voted winner: " + responseDictionary["thanosWins"];
+        document.getElementById('resultText').innerHTML = "Full Results: \n " + JSON.stringify(responseDictionary);
+        try{
+            document.getElementById('adsText').innerHTML = "Ads: \n " + JSON.stringify(responseDictionary.ads);
+        }catch(err){
+            document.getElementById('adsText').innerHTML = "Ads: \n " + "no ads on this search";
+        }
+    }
+    </script>
+</body>
+</html>

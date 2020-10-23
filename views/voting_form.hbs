@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <nav class="nav_bar">
+        <a href="https://user.tjhsst.edu/2020kusubyan/">Home!</a>
+        <a href="https://user.tjhsst.edu/2020kusubyan/weatherform">Weather Form!</a>
+        <a href="https://user.tjhsst.edu/2020kusubyan/funform">Fun Form!</a>
+    </nav>
+    <div class="selection_div">
+        <form>
+          <br><br>
+          <h1>Who would win in a fight?</h1><br>
+          <input type="radio" name="winner" value="Yoda">Yoda<br>
+          <input type="radio" name="winner" value="Florida Man">Florida Man<br>
+          <input type="radio" name="winner" value="Night King">Night King<br>
+          <input type="radio" name="winner" value="Thanos">Thanos<br><br>
+          <button type="button" onclick="castVote()">Cast Vote</button>
+        </form>
+        <br><br><br><br><br>
+        <p id="resultText">Yoda voted winner: {{yodaWins}}<br>Florida Man voted winner: {{floridaManWins}}<br>Night King voted winner: {{nightKingWins}}<br>Thanos voted winner: {{thanosWins}}</p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+    function castVote() {    
+        var radioValue = document.querySelector("input[name='winner']:checked").value;
+        var ajax_params = {
+            'url'     : "https://user.tjhsst.edu/2020kusubyan/voting_worker",
+            'type'    : "get",
+            'data'    : { 'winner' : radioValue },
+            'success' : onServerResponse
+        }
+        $.ajax( ajax_params)
+    }
+    function onServerResponse (responseDictionary) {
+        console.log(responseDictionary);
+        document.getElementById('resultText').innerHTML = "Yoda voted winner: " + responseDictionary["yodaWins"]+ "<br>Florida Man voted winner: " + responseDictionary["floridaManWins"] + "<br>Night King voted winner: " + responseDictionary["nightKingWins"] + "<br>Thanos voted winner: " + responseDictionary["thanosWins"];
+    }
+    </script>
+</body>
+</html>

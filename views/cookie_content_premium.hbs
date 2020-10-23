@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="css/cookiestyle.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav_bar">
+        <a href="https://user.tjhsst.edu/2020kusubyan/">Home.</a>
+        <a href="https://user.tjhsst.edu/2020kusubyan/weatherform">Weather Form!</a>
+        <a href="https://user.tjhsst.edu/2020kusubyan/funform">Fun Form!</a>
+        <a href="https://user.tjhsst.edu/2020kusubyan/map_game">Map Game!</a>
+        <a href="https://user.tjhsst.edu/2020kusubyan/reset">reset cooky</a>
+        <a>{{username}}</a>
+    </nav>
+    <div id="premiumContentdiv" class="contentdiv">
+        <p id="premiumContentText"></p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/NYGZJcKmsUo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <button id="logoutButton">Logout</button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        viewsNum = {{viewsNum}};
+        premiumElement = document.getElementById('premiumContentdiv');
+        document.getElementById('premiumContentText').innerHTML = 'Welcome to premium content, visit #' + String(viewsNum);
+        document.getElementById("logoutButton").onclick = function () {
+            location.href = "https://user.tjhsst.edu/2020kusubyan/reset";
+        };
+    </script>
+</body>
+</html>

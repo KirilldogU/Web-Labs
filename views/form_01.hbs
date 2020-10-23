@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Give me the Deets!</h1>
+
+<form action="getweather" method="get">
+  Latitude Requested:<br>
+  <input id = "lat" type="text" name="lat" min="25" max="50" required>
+  <br>
+  Longitude Requested:<br>
+  <input id="long" type="text" name="long" min = "-65" max= "-130" required>
+  <br>
+  Which format would you like?
+  <br>
+  <input type="radio" name="format" value="Normal" checked> Normal<br>
+  <input type="radio" name="format" value="JSON"> JSON<br>
+  <button>Request!</button>
+  
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="css/cookiestyle.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav_bar">
+        <a href="https://user.tjhsst.edu/2020kusubyan/">Home.</a>
+        <a href="https://user.tjhsst.edu/2020kusubyan/weatherform">Weather Form!</a>
+        <a href="https://user.tjhsst.edu/2020kusubyan/funform">Fun Form!</a>
+        <a href="https://user.tjhsst.edu/2020kusubyan/map_game">Map Game!</a>
+        <a href="https://user.tjhsst.edu/2020kusubyan/reset">reset cooky</a>
+    </nav>
+    <div id="freeContentdiv" class="contentdiv">
+        <p id="premiumContentText">You ran out of premium content. Log in for more.</p>
+        <button id='loginButton'>LOGIN</button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        document.getElementById("loginButton").onclick = function () {
+            location.href = "https://user.tjhsst.edu/2020kusubyan/login";
+        };
+    </script>
+</body>
+</html>

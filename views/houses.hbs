@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <nav class="nav_bar">
+        <a href="https://user.tjhsst.edu/2020kusubyan/">Home.</a>
+    </nav>
+    <br>
+    <div>
+        <h2><strong>Hello, {{display_name}}<br><br>
+        <img src="resources/frozen characters.jpg" style="width:60%; height:55%;">
+        <br>
+        <h1>Who the most playa?</h1>
+        <button onclick="elsaVote()"><img src="resources/elsa.png" style="width:60px; height:60px;"></img></button>
+        <button onclick="annaVote()"><img src="resources/anna.jpg" style="width:60px; height:60px;"></img></button>
+        <button onclick="kristoffVote()"><img src="resources/kristoff.jpg" style="width:60px; height:60px;"></img></button>
+        <button onclick="olafVote()"><img src="resources/olaf.png" style="width:60px; height:60px;"></img></button>
+        <button onclick="svenVote()"><img src="resources/sven.jpg" style="width:60px; height:60px;"></img></button>
+        <button onclick="hansVote()"><img src="resources/hans.jpg" style="width:60px; height:60px;"></img></button>
+        <h2 id="result_text"></h2>
+    </div>
+    <br>
+    <br>
+    <button id="logoutButton">Logout</button>
+    <audio id="sound">   
+    <source src="audio/roar.mp3" />   
+    </audio> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/housesJS.js">
+    </script>
+</body>
+</html>

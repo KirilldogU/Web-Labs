@@ -1,0 +1,37 @@
+.nav_bar a {
+  color: red;
+  text-align: center;
+  padding: 20px;
+  font-size: 25px;
+}
+
+.nav_bar a:hover {
+  background-color: #7A2FD8;
+  color: black;
+}
+
+.contentdiv {
+    height: 100%;
+    width: 100%
+}
+
+body {
+  background: #08295e;
+  margin: 20px;
+  padding: 20px;
+  font-size: 30px;
+  align-content: center;
+}
+
+form {
+    color:white;
+    font-family: Georgia;
+    text-align: center;
+    align-content: center;
+}
+
+p {
+  color: white;
+  font-family: Georgia;
+  text-align: center;
+}

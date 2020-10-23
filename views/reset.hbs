@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="css/cookiestyle.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav_bar">
+        <a href="https://user.tjhsst.edu/2020kusubyan/">Home.</a>
+        <a href="https://user.tjhsst.edu/2020kusubyan/weatherform">Weather Form!</a>
+        <a href="https://user.tjhsst.edu/2020kusubyan/funform">Fun Form!</a>
+        <a href="https://user.tjhsst.edu/2020kusubyan/map_game">Map Game!</a>
+    </nav>
+    <div id="divC" class="contentdiv">
+        <p id="premiumContentText">You are succesfully logged out.</p>
+        <button id='returnButton'>Return to Content</button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        document.getElementById("returnButton").onclick = function () {
+            location.href = "https://user.tjhsst.edu/2020kusubyan/cookie_content";
+        };
+    </script>
+</body>
+</html>

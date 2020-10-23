@@ -1,0 +1,76 @@
+.nav_bar {
+  background-color: #1A88C7;
+  color: #1A88C7;
+}
+
+.nav_bar a {
+  float: left;
+  color: red;
+  text-align: center;
+  padding: 20px;
+  font-size: 25px;
+}
+
+.nav_bar a:hover {
+  background-color: #7A2FD8;
+  color: black;
+}
+
+.nav_bar active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+body {
+  background: #ffff00;
+  margin: 10px;
+  padding: 10px;
+}
+
+.changejarjarbutton{
+    color:blue;
+    background-color: pink;
+}
+
+h1 {
+  color: black;
+  padding-top: 100px;
+  width: 100%;
+  font-family: Comic Sans MS;
+  text-align: center;
+}
+
+h2 {
+  color:#964D13;
+  padding: 30px;
+  text-align: center;
+  font-family: Georgia;
+}
+
+div {
+  font-family: Georgia;
+}
+.caption {
+  display: block;
+  font-family: 'Courier New';
+  font-size: 14px;
+  font-style: italic;
+  background-color: white;
+  color: black;
+}
+
+.media {
+  height: 300px;
+  width: 400px;
+  margin: 40px;
+  float: left;
+}
+
+.selection_div {
+    font-family: Georgia;
+    text-shadow: 1px 1px gray;
+    font-size: 16px;
+}
+.imageID {
+  background-image: url("https://thenerdfightingfeminist.files.wordpress.com/2012/11/jar-jar-binks.jpg");
+}

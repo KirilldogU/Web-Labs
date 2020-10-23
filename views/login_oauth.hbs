@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <nav class="nav_bar">
+        <a href="https://user.tjhsst.edu/2020kusubyan/">Home.</a>
+        <a href="https://user.tjhsst.edu/2020kusubyan/weatherform">Weather Form!</a>
+        <a href="https://user.tjhsst.edu/2020kusubyan/funform">Fun Form!</a>
+        <a href="https://user.tjhsst.edu/2020kusubyan/voting_form">AJAX Poll!</a>
+        <a href="https://user.tjhsst.edu/2020kusubyan/map_game">Map Game</a>
+    </nav>
+    <br>
+    <div>
+        <h2><strong>Hello {{display_name}} or {{short_name}} for short.</strong></h2>    
+        <br>
+        <p>You will graduate in {{graduation_year}} you heckin {{grade.name}}</p><br>
+        <p>{{middle_name}} is a cool middle name.</p>
+        <p>Make sure to say hi to {{counselor.full_name}}</p>
+    </div>
+    <br>
+    <br>
+    <button id="logoutButton">Logout</button>
+    <script type="text/javascript">
+        document.getElementById("logoutButton").onclick = function () {
+            location.href = "https://user.tjhsst.edu/2020kusubyan/reset_oauth";
+        };
+    </script>
+</body>
+</html>
